@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @font-face {
     font-family: 'AgathoLightCAPS';
     src: url('./assets/fonts/AgathoLight.otf') format('otf');
@@ -36,4 +37,6 @@ a:hover {
 html, body {
     margin: 0px;
     padding: 0px;
+    min-width: 320px;
+
 }
