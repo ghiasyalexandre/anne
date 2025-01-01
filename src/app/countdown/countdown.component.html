@@ -1,0 +1,8 @@
+<div class="flex flex-col justify-between h-screen bg-gray-200" *ngIf="timeLeft > 0">
+    <div class="flex flex-col items-center justify-items-center">
+        <h2 class="text-5xl my-4 font-normal font-serif">Save the Date!</h2>
+        <h2 class="text-7xl font-bold text-white bg-black/90 p-4 rounded-md hover:scale-110 transition-all ease-in-out duration-500">{{ days }}d {{ hours }}h {{ minutes }}m {{ seconds }}s</h2>
+        <p class="text-xl text-gray-700 mt-4 font-nromal  font-serif">Countdown to {{ targetDate }}</p>
+    </div>
+    <p class="text-xl text-gray-700 text-center mb-4  font-serif">Website Not Yet Launched. Check Back Later!</p>
+</div>

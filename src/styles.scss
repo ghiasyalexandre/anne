@@ -15,16 +15,9 @@
 }
 
 a {
-    transition: color 100ms ease-in-out;
     cursor: pointer;
-    
 }
 
-a:hover {
-    color: gray;
-    text-underline-offset: 5px;
-    text-decoration: underline;
-}
 
 :root {
     min-width: 320px;

@@ -1,37 +1,41 @@
 <main class="main">
-  <div
-    id="home"
-    class="text-center flex flex-col place-items-center min-h-svh w-full"
-  >
-    <div class="pt-56 lg:pt-40 p-2 flex place-items-center">
-      <h1 class="titleNames text-6xl md:text-8xl">ANNE</h1>
-      <p class="text-7xl font-light">+</p>
-      <h1 class="titleNames text-6xl md:text-8xl">TICO</h1>
-    </div>
-    <p class="italic text-lg">November 12, 2025 | Old San Juan, Puerto Rico</p>
-    <img
-      draggable="false"
-      class="max-w-[320px] md:max-w-[400px] lg:max-w-[480px] pt-4"
-      src="https://static.wixstatic.com/media/47a772_aa379537e14d4ef5837aea735e972d3c~mv2.png/v1/fill/w_502,h_416,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ra%20monogram_edited.png"
-    />
-    <img
-      draggable="false"
-      class="absolute -z-30 min-h-full w-full object-cover"
-      src="https://static.wixstatic.com/media/47a772_d5a7a79974784210928ed51a63703d8e~mv2.jpg/v1/fill/w_1903,h_1078,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/47a772_d5a7a79974784210928ed51a63703d8e~mv2.jpg"
-    />
-  </div>
-  <div class="absolute left-4 md:left-8 top-4 md:top-8">
+  <!-- <div class="absolute left-4 md:left-8 top-4 md:top-8">
     <ul class="italic space-y-2">
-      <li><a draggable="false">Home</a></li>
-      <li><a draggable="false">Our Story</a></li>
-      <li><a draggable="false">Details</a></li>
-      <li><a draggable="false">Wedding Party</a></li>
-      <li><a draggable="false">Accomondations</a></li>
-      <li><a draggable="false">Registry</a></li>
-      <li><a draggable="false">RSVP</a></li>
+      <li>
+        <a class="relative group" routerLink="/" draggable="false">Home
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-neutral-400 transition-all group-hover:w-full"></span>
+        </a>
+      </li> 
+      <li>
+        <a class="relative group" routerLink="/accomondations" draggable="false">Accomondations
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-neutral-400 transition-all group-hover:w-full"></span>
+        </a>
+      </li>
+      <li>
+        <a class="relative group" routerLink="/details" draggable="false">Details
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-neutral-400 transition-all group-hover:w-full"></span>
+        </a>
+      </li>
+      <li>
+        <a class="relative group" routerLink="/gallery" draggable="false">Gallery
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-neutral-400 transition-all group-hover:w-full"></span>
+        </a>
+      </li>
+
+      <li>
+        <a class="relative group" routerLink="/registry" draggable="false">Registry
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-neutral-400 transition-all group-hover:w-full"></span>
+        </a>
+      </li>
+      <li>
+        <a class="relative group" routerLink="/rsvp" draggable="false">RSVP
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-neutral-400 transition-all group-hover:w-full"></span>
+        </a>
+      </li>
     </ul>
-  </div>
-  <app-story />
-  <app-details />
+  </div> -->
+  <meta property="og:image" content="https://domain.tld/image.jpg">
+
   <router-outlet />
+  <!-- <app-footer /> -->
 </main>
