@@ -12,81 +12,46 @@ export const routes: Routes = [
     {
         path: 'wait',
         component: HomeComponent,
-        data: {
-            animation: 'HomePage',
-            title: 'UCF Pi Delta Psi Home',
-            description:
-              'Discover the UCF Phi Chapter of the Pi Delta Psi fraternity. Learn about our mission, history, and brotherhood. Explore social events, videos, and community initiatives. Join us today!',
-          },
+
     },
     {
         path: 'WeddingInvitation',
         component: SavethedComponent,
         // data: {
         //     animation: 'HomePage',
-        //     title: 'UCF Pi Delta Psi Home',
+        //     title: ' Home',
         //     description:
-        //       'Discover the UCF Phi Chapter of the Pi Delta Psi fraternity. Learn about our mission, history, and brotherhood. Explore social events, videos, and community initiatives. Join us today!',
+        //       'Discoverd community initiatives!',
         //   },
     },
     {
-        path: 'details',
+        path: 'Details',
         component: DetailsComponent,
-        data: {
-            animation: 'HomePage',
-            title: 'UCF Pi Delta Psi Home',
-            description:
-              'Discover the UCF Phi Chapter of the Pi Delta Psi fraternity. Learn about our mission, history, and brotherhood. Explore social events, videos, and community initiatives. Join us today!',
-          },
+
     },
     {
         path: '',
         component: PreviewwebComponent,
-        data: {
-            animation: 'HomePage',
-            title: 'UCF Pi Delta Psi Home',
-            description:
-              'Discover the UCF Phi Chapter of the Pi Delta Psi fraternity. Learn about our mission, history, and brotherhood. Explore social events, videos, and community initiatives. Join us today!',
-          },
+
     },
     {
-        path: 'gallery',
+        path: 'Gallery',
         component: GalleryComponent,
-        data: {
-            animation: 'HomePage',
-            title: 'UCF Pi Delta Psi Home',
-            description:
-              'Discover the UCF Phi Chapter of the Pi Delta Psi fraternity. Learn about our mission, history, and brotherhood. Explore social events, videos, and community initiatives. Join us today!',
-          },
+
     },
     {
-        path: 'accomondations',
+        path: 'Accomondations',
         component: AccomondationsComponent,
-        data: {
-            animation: 'HomePage',
-            title: 'UCF Pi Delta Psi Home',
-            description:
-              'Discover the UCF Phi Chapter of the Pi Delta Psi fraternity. Learn about our mission, history, and brotherhood. Explore social events, videos, and community initiatives. Join us today!',
-          },
+
     },
     {
-        path: 'registry',
+        path: 'Registry',
         component: RegistryComponent,
-        data: {
-            animation: 'HomePage',
-            title: 'UCF Pi Delta Psi Home',
-            description:
-              'Discover the UCF Phi Chapter of the Pi Delta Psi fraternity. Learn about our mission, history, and brotherhood. Explore social events, videos, and community initiatives. Join us today!',
-          },
+
     },
     {
-        path: 'rsvp',
+        path: 'RSVP',
         component: RsvpComponent,
-        data: {
-            animation: 'HomePage',
-            title: 'UCF Pi Delta Psi Home',
-            description:
-              'Discover the UCF Phi Chapter of the Pi Delta Psi fraternity. Learn about our mission, history, and brotherhood. Explore social events, videos, and community initiatives. Join us today!',
-          },
+
     },
 ];
