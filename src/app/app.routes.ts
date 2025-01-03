@@ -15,7 +15,7 @@ export const routes: Routes = [
 
     },
     {
-        path: 'WeddingInvitation',
+        path: 'SaveTheDate',
         component: SavethedComponent,
         // data: {
         //     animation: 'HomePage',
