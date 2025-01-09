@@ -10,7 +10,7 @@ import { PreviewwebComponent } from './previewweb/previewweb.component';
 
 export const routes: Routes = [
     {
-        path: 'wait',
+        path: '',
         component: HomeComponent,
 
     },
@@ -30,7 +30,7 @@ export const routes: Routes = [
 
     },
     {
-        path: '',
+        path: 'Wait',
         component: PreviewwebComponent,
 
     },
