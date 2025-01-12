@@ -1,6 +1,6 @@
 <div id="home" class="text-center text-pretty relative">
   <div
-    class=" bgMobile md:bg1 py-24 min-h-fit flex flex-col place-items-center place-content-center"
+    class=" bg2 md:bg2 py-24 min-h-fit flex flex-col place-items-center place-content-center"
   >
     <!-- <img
       class="absolute w-full object-cover min-h-full left-0 -z-50 opacity-0 lg:opacity-80"
@@ -18,10 +18,10 @@
     <p class="italic text-lg sm:text-xl lg:text-2xl">April 8th, 2025 | Lajas, Puerto Rico</p>
     <img
       draggable="false"
-      class="flex justify-self-center max-w-[30%] sm:max-w-[185px] lg:max-w-[215px] pt-4"
+      class="flex justify-self-center max-w-[30%]  sm:max-w-[185px] lg:max-w-[215px] pt-4"
       src="./Monogram.webp"
     />
-    <p class="px-16 text-xl md:text-2xl">
+    <p class="px-8 text-xl md:text-2xl mx-8  py-8 didotItalic bg-white rounded-2xl">
       Together with their families,<br />
       Tico & Anne<br />
       are thrilled to invite you<br />
@@ -32,7 +32,7 @@
   </div>
 
   <!-- Section 2 ---------------------->
-  <div class="h-fit relative bg3">
+  <div class="h-fit relative bg3 didotItalic">
     <!-- <img class="absolute left-0 h-full bg-cover w-full -z-50 " src="./bg2.avif" /> -->
     <div class="flex flex-col gap-8 place-items-center py-16 px-8 md:px-24 lg:px-32">
       <h3 class="text-3xl md:text-4xl font-bold">Destination</h3>
@@ -56,12 +56,12 @@
 
   <!-- Section 3 -------------------------->
 
-  <div class="relative h-fit bg2">
-    <div class="flex flex-col place-items-center gap-8 p-8 filter-none">
+  <div class="relative h-fit bg2 didotItalic">
+    <div class="flex flex-col place-items-center bg-white gap-8 p-8 filter-none">
 
       <h2 class="text-3xl md:text-4xl font-bold">Details</h2>
       <div class="flex flex-col gap-1 text-lg sm:text-xl">
-        <p><a class="font-semibold cursor-default">Date</a>: Wednesday, the 9th of April, 2025</p>
+        <p><a class="font-semibold cursor-default">Date</a>: Tuesday, the 8th of April, 2025</p>
         <p><a class="font-semibold cursor-default">Time</a>: 5:00 PM</p>
         <p><a class="font-semibold cursor-default">Venue</a>: Hacienda Los Pablo, Lajas, Puerto Rico</p>
       </div>
@@ -81,15 +81,43 @@
         <p>
           Kindly
           <a
-            class="font-medium underline underline-offset-2 cursor-pointer"
-            >RSVP</a
+            class="font-medium relative group cursor-pointer"
+            >RSVP
+            <span
+            class="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-neutral-800 transition-all group-hover:w-[90%]"
+          ></span></a
           >
-          by April 8th, 2025
+          by March 8th, 2025
         </p>
         <p><a class="font-semibold cursor-default">Dress Code:</a> Cocktail</p>
-        
+        <p><a class="font-semibold">No</a> kids under <a class="font-semibold">13</a></p>
       </div>
       <p class="text-lg sm:text-xl">We can't wait to fiesta with you! 🌺💕</p>
     </div>
+
+    <div class="text-center text-white h-fit">
+      <p class="text-white sm:text-black  font-serif font-bold text-xl md:text-2xl mt-4 text-center">
+          Add to C<a class="text-white sm:text-black">alendar</a>
+      </p>
+      <div id="logo_container" class="  font-serif mt-2 pb-4 text-base md:text-xl text-center flex justify-center md:gap-2">
+          <a
+          class="bg-black text-white shadow-md shadow-black/30 rounded py-2 px-3 hover:scale-110 transition-all duration-300 ease-in-out"
+          href="https://calget.com/0hx9o49u?cal=google" title="Google" target="_blank" style="display: inline-flex; align-items: center; margin: 5px; text-decoration: none;">
+              <img src="https://calget.com/assets/img/calendar_icons/icon-google.png" alt="Google" border="0" style="height: 18px; width: 18px; margin-right: 10px;">Google
+          </a>
+          <a class="bg-black text-white shadow-md shadow-black/30 rounded py-2 px-3 hover:scale-110 transition-all duration-300 ease-in-out"
+          href="https://calget.com/0hx9o49u?cal=apple" title="Apple" target="_blank" style="display: inline-flex; align-items: center; margin: 5px; text-decoration: none;">
+              <img class="invert" src="https://calget.com/assets/img/calendar_icons/icon-apple.png" alt="Apple" border="0" style="height: 18px; width: 18px; margin-right: 10px;">Apple
+          </a>
+          <a class="bg-black text-white shadow-md shadow-black/30 rounded py-2 px-3 hover:scale-110 transition-all duration-300 ease-in-out"
+          href="https://calget.com/0hx9o49u?cal=outlook" title="Outlook Web" target="_blank" style="display: inline-flex; align-items: center; margin: 5px; text-decoration: none;">
+              <img src="https://calget.com/assets/img/calendar_icons/icon-outlook.png" alt="Outlook" border="0" style="height: 18px; width: 18px; margin-right: 10px;">Outlook
+          </a>
+
+      
+      </div>
   </div>
+  </div>
+
+  
 </div>

@@ -9,9 +9,45 @@
     src: url('./assets/fonts/AgathoLight.otf') format('otf');
 }
 
+@font-face {
+    font-family: 'DidotBold';
+    src: url('./assets/fonts/DidotBold.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'DidotItalic';
+    src: url('./assets/fonts/DidotItalic.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'DidotTitle';
+    src: url('./assets/fonts/DidotTitle.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'Didot';
+    src: url('./assets/fonts/Didot.otf') format('otf');
+}
+
 
 .titleNames {
     font-family: 'AgathoLightCAPS', sans-serif;
+}
+
+.didot {
+    font-family: 'Didot', sans-serif;
+}
+
+.didotBold {
+    font-family: 'DidotBold', sans-serif;
+}
+
+.didotTitle {
+    font-family: 'DidotTitle', sans-serif;
+}
+
+.didotItalic {
+    font-family: 'DidotItalic', sans-serif;
 }
 
 a {
