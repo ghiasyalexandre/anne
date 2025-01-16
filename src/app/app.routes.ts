@@ -9,49 +9,36 @@ import { SavethedComponent } from './savethed/savethed.component';
 import { PreviewwebComponent } from './previewweb/previewweb.component';
 
 export const routes: Routes = [
-    {
-        path: '',
-        component: HomeComponent,
-
-    },
-    {
-        path: 'SaveTheDate',
-        component: SavethedComponent,
-        // data: {
-        //     animation: 'HomePage',
-        //     title: ' Home',
-        //     description:
-        //       'Discoverd community initiatives!',
-        //   },
-    },
-    {
-        path: 'Details',
-        component: DetailsComponent,
-
-    },
-    {
-        path: 'Wait',
-        component: PreviewwebComponent,
-
-    },
-    {
-        path: 'Gallery',
-        component: GalleryComponent,
-
-    },
-    {
-        path: 'Accomondations',
-        component: AccomondationsComponent,
-
-    },
-    {
-        path: 'Registry',
-        component: RegistryComponent,
-
-    },
-    {
-        path: 'RSVP',
-        component: RsvpComponent,
-
-    },
+  {
+    path: '',
+    component: HomeComponent,
+  },
+  {
+    path: 'SaveTheDate',
+    component: SavethedComponent,
+  },
+  {
+    path: 'details',
+    component: DetailsComponent,
+  },
+  {
+    path: 'Wait',
+    component: PreviewwebComponent,
+  },
+  {
+    path: 'gallery',
+    component: GalleryComponent,
+  },
+  {
+    path: 'accomondations',
+    component: AccomondationsComponent,
+  },
+  {
+    path: 'registry',
+    component: RegistryComponent,
+  },
+  {
+    path: 'rsvp',
+    component: RsvpComponent,
+  },
 ];

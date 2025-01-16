@@ -6,32 +6,49 @@
 
 @font-face {
     font-family: 'AgathoLightCAPS';
-    src: url('./assets/fonts/AgathoLight.otf') format('otf');
+    src: url('./assets/fonts/AgathoLight.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'DidotBold';
-    src: url('./assets/fonts/DidotBold.otf') format('otf');
+    src: url('./assets/fonts/DidotBold.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'DidotItalic';
-    src: url('./assets/fonts/DidotItalic.otf') format('otf');
+    src: url('./assets/fonts/DidotItalic.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'DidotTitle';
-    src: url('./assets/fonts/DidotTitle.otf') format('otf');
+    src: url('./assets/fonts/DidotTitle.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'Didot';
-    src: url('./assets/fonts/Didot.otf') format('otf');
+    src: url('./assets/fonts/Didot.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'Floral';
+    src: url('../src/assets/fonts/Floral.ttf') format('truetype');
+}
 
-.titleNames {
+@font-face {
+    font-family: 'Foliar';
+    src: url('assets/fonts/Foliar.ttf') format('truetype');
+}
+
+.agatho {
     font-family: 'AgathoLightCAPS', sans-serif;
+}
+
+.floral {
+    font-family: 'Floral', sans-serif;
+}
+
+.foliar {
+    font-family: 'Foliar', sans-serif;
 }
 
 .didot {

@@ -1,16 +1,23 @@
 .bg1 {
-  background-image: url("../../assets/imgs/newBg.svg");
+  background-image: url("../../assets/imgs/bg.webp");
   background-size: cover;
+  background-position: center;
 }
 .bg2 {
   background-size: cover;
-  background-image: url("../../assets/imgs/weddingInvite.svg");
+  background-position: center;
+
+  background-image: url("../../assets/imgs/bg1.webp");
 }
 .bg3 {
   background-size: cover;
-  background-image: url("../../assets/imgs/newBg.svg");
+  background-position: center;
+
+  background-image: url("../../assets/imgs/bg2.webp");
 }
 .bgMobile {
   background-size: cover;
+  background-position: center;
+
   background-image: url("../../assets/imgs/bgMobile.webp");
 }

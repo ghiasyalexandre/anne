@@ -1,8 +1,105 @@
-<div class="h-screen">
+<div class="">
+  <div class="bg2 h-screen px-8 py-8">
+    <h2 class="text-2xl font-semibold mb-4">RSVP Form</h2>
+    <form
+      class="text-lg flex flex-col gap-3"
+      [formGroup]="rsvpForm"
+      (ngSubmit)="sendRSVP()"
+    >
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input
+          type="text"
+          id="name"
+          formControlName="name"
+          class="border rounded ml-2 px-2"
+        />
+        <div
+          *ngIf="rsvpForm.get('name')?.touched && rsvpForm.get('name')?.invalid"
+          class="error"
+        >
+          Name is required.
+        </div>
+      </div>
 
-    <div class="pt-44 text-center">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          formControlName="email"
+          class="border rounded ml-2 px-2 w-64"
+        />
+        <div
+          *ngIf="
+            rsvpForm.get('email')?.touched && rsvpForm.get('email')?.invalid
+          "
+          class="error"
+        >
+          A valid email is required.
+        </div>
+      </div>
 
-        <h1 class="text-7xl font-medium">RSVP</h1>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input
+          type="phone"
+          id="phone"
+          formControlName="phone"
+          class="border rounded ml-2 px-2"
+        />
+        <div
+          *ngIf="
+            rsvpForm.get('email')?.touched && rsvpForm.get('email')?.invalid
+          "
+          class="error"
+        >
+          A valid phone number is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Attending:</label>
+        <div class="flex gap-4">
+          <label>
+            <input type="radio" formControlName="attending" value="yes" />
+            Yes
+          </label>
+          <label>
+            <input type="radio" formControlName="attending" value="no" />
+            No
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Events:</label>
+        <div *ngFor="let event of events">
+          <label>
+            <input
+              type="checkbox"
+              [value]="event"
+              (change)="toggleEvent(event)"
+            />
+            {{ event }}
+          </label>
+        </div>
+      </div>
+
+      <button
+        type="submit"
+        [disabled]="rsvpForm.invalid || isSubmitting"
+        class="border-2 mt-4 border-black rounded bg-black text-white w-32 py-1 hover:text-black hover:bg-transparent transition-all duration-300 ease-in-out"
+      >
+        {{ isSubmitting ? "Submitting..." : "Submit" }}
+      </button>
+    </form>
+
+    <div *ngIf="submissionSuccess" class="success-message">
+      Thank you for your RSVP!
     </div>
-
+    <div *ngIf="submissionError" class="error-message">
+      There was an error submitting your RSVP. Please try again.
+    </div>
+  </div>
 </div>

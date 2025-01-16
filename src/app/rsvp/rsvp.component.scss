@@ -1,0 +1,41 @@
+
+  
+  .error {
+    color: red;
+    font-size: 0.9em;
+  }
+  
+  .success-message {
+    color: green;
+    margin-top: 1rem;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 1rem;
+  }
+  
+  .bg1 {
+    background-image: url("../../assets/imgs/bg.webp");
+    background-size: cover;
+    background-position: center;
+  }
+  .bg2 {
+    background-size: cover;
+    background-position: center;
+  
+    background-image: url("../../assets/imgs/bg1.webp");
+  }
+  .bg3 {
+    background-size: cover;
+    background-position: center;
+  
+    background-image: url("../../assets/imgs/bg2.webp");
+  }
+  .bgMobile {
+    background-size: cover;
+    background-position: center;
+  
+    background-image: url("../../assets/imgs/bgMobile.webp");
+  }
+  
