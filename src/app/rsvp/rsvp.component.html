@@ -1,12 +1,14 @@
 <div class="">
-  <div class="bg2 h-screen px-4 sm:px-8 py-4 sm:py-8 sm:flex justify-center">
+  <div
+    class="bg2 h-screen min-h-fit px-4 sm:px-8 py-4 sm:py-8 sm:flex sm:flex-col place-items-center"
+  >
+    <h1 class="text-5xl didotItalic font-bold mb-4">RSVP</h1>
+
     <div
       class="bg-white h-fit sm:min-w-[450px] p-8 rounded-lg shadow-md shadow-black/30"
     >
-      <h2
-        class="text-3xl didot tracking-wide font-semibold mb-4 text-center sm:text-left"
-      >
-        RSVP FORM
+      <h2 class="text-3xl didot tracking-wide font-semibold mb-4 text-center">
+        Let's Celebrate🌺💕
       </h2>
       <hr class="mb-4" />
       <form
@@ -24,14 +26,14 @@
             formControlName="name"
             class="border rounded px-2 w-full"
           />
-          <!-- <div
+          <div
             *ngIf="
               rsvpForm.get('name')?.touched && rsvpForm.get('name')?.invalid
             "
-            class="error"
+            class="error font-normal text-sm"
           >
-            Name is required.
-          </div> -->
+            Full name is required.
+          </div>
         </div>
 
         <div class="flex flex-col">
@@ -44,14 +46,14 @@
             formControlName="email"
             class="border rounded px-2 w-full"
           />
-          <!-- <div
+          <div
             *ngIf="
               rsvpForm.get('email')?.touched && rsvpForm.get('email')?.invalid
             "
-            class="error"
+            class="error font-normal text-sm"
           >
             A valid email is required.
-          </div> -->
+          </div>
         </div>
 
         <div class="flex flex-col">
@@ -59,19 +61,186 @@
             >Phone Number:</label
           >
           <input
-            type="phone"
+            type="tel"
             id="phone"
             formControlName="phone"
             class="border rounded px-2 w-full"
           />
-          <!-- <div
+          <div
             *ngIf="
               rsvpForm.get('phone')?.touched && rsvpForm.get('phone')?.invalid
             "
-            class="error"
+            class="error font-normal text-sm"
           >
             A valid phone number is required.
-          </div> -->
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <label class="font-semibold text-xl tracking-wide" for="address"
+            >Address:</label
+          >
+          <input
+            type="text"
+            id="address"
+            formControlName="address"
+            class="border rounded px-2 w-full"
+          />
+          <div
+            *ngIf="
+              rsvpForm.get('address')?.touched &&
+              rsvpForm.get('address')?.invalid
+            "
+            class="error font-normal text-sm"
+          >
+            A valid address is required.
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <label class="font-semibold text-xl tracking-wide" for="zipcode"
+            >Zipcode:</label
+          >
+          <input
+            type="text"
+            id="zipcode"
+            formControlName="zipcode"
+            class="border rounded px-2 w-full"
+          />
+          <div
+            *ngIf="
+              rsvpForm.get('zipcode')?.touched &&
+              rsvpForm.get('zipcode')?.invalid
+            "
+            class="error font-normal text-sm"
+          >
+            A valid zipcode is required.
+          </div>
+        </div>
+
+        <!-- +1 Invitation Toggle -->
+        <div class="form-group text-xl font-semibold tracking-wide">
+          <label class="flex gap-2">
+            <input type="checkbox" formControlName="plusOne" />
+            Bringing a +1?
+          </label>
+        </div>
+
+        <!-- +1 Details (Only Shows When Checked) -->
+        <div *ngIf="showPlusOne" class="flex flex-col gap-3 tracking-wide">
+          <hr class="border-neutral-400/30" />
+          <div class="flex flex-col">
+            <label class="font-semibold text-xl tracking-wide" for="plusOneName"
+              >+1 Full Name:</label
+            >
+            <input
+              type="text"
+              id="plusOneName"
+              formControlName="plusOneName"
+              class="border rounded px-2 w-full"
+            />
+            <div
+              *ngIf="
+                rsvpForm.get('plusOneName')?.touched &&
+                rsvpForm.get('plusOneName')?.invalid
+              "
+              class="error font-normal text-sm"
+            >
+              Please enter a valid name for your guest.
+            </div>
+          </div>
+
+          <div class="flex flex-col">
+            <label
+              class="font-semibold text-xl tracking-wide"
+              for="plusOneEmail"
+              >+1 Email:</label
+            >
+            <input
+              type="email"
+              id="plusOneEmail"
+              formControlName="plusOneEmail"
+              class="border rounded px-2 w-full"
+            />
+            <div
+              *ngIf="
+                rsvpForm.get('plusOneEmail')?.touched &&
+                rsvpForm.get('plusOneEmail')?.invalid
+              "
+              class="error font-normal text-sm"
+            >
+              Please enter a valid email for your guest.
+            </div>
+          </div>
+
+          <div class="flex flex-col">
+            <label
+              class="font-semibold text-xl tracking-wide"
+              for="plusOnePhone"
+              >+1 Phone Number:</label
+            >
+            <input
+              type="tel"
+              id="plusOnePhone"
+              formControlName="plusOnePhone"
+              class="border rounded px-2 w-full"
+            />
+            <div
+              *ngIf="
+                rsvpForm.get('plusOnePhone')?.touched &&
+                rsvpForm.get('plusOnePhone')?.invalid
+              "
+              class="error font-normal text-sm"
+            >
+              Please enter a valid phone number for your guest.
+            </div>
+          </div>
+
+          <div class="flex flex-col">
+            <label
+              class="font-semibold text-xl tracking-wide"
+              for="plusOneAddress"
+              >+1 Address:</label
+            >
+            <input
+              type="text"
+              id="plusOneAddress"
+              formControlName="plusOneAddress"
+              class="border rounded px-2 w-full"
+            />
+            <div
+              *ngIf="
+                rsvpForm.get('plusOneAddress')?.touched &&
+                rsvpForm.get('plusOneAddress')?.invalid
+              "
+              class="error font-normal text-sm"
+            >
+              Please enter a valid address for your guest.
+            </div>
+          </div>
+
+          <div class="flex flex-col">
+            <label
+              class="font-semibold text-xl tracking-wide"
+              for="plusOneZipcode"
+              >+1 Zipcode:</label
+            >
+            <input
+              type="text"
+              id="plusOneZipcode"
+              formControlName="plusOneZipcode"
+              class="border rounded px-2 w-full"
+            />
+            <div
+              *ngIf="
+                rsvpForm.get('plusOneZipcode')?.touched &&
+                rsvpForm.get('plusOneZipcode')?.invalid
+              "
+              class="error font-normal text-sm"
+            >
+              Please enter a valid zipcode for your guest.
+            </div>
+          </div>
         </div>
 
         <div class="flex flex-col gap-2">
@@ -102,21 +271,35 @@
           </div>
         </div>
 
+        <div *ngIf="showPlusOne" class="flex flex-col gap-3 tracking-wide">
+          <label class="font-semibold text-xl tracking-wide">+1 Events:</label>
+          <div *ngFor="let event of events">
+            <label>
+              <input
+                type="checkbox"
+                [value]="event"
+                (change)="toggleEvent1(event)"
+              />
+              {{ event }}
+            </label>
+          </div>
+        </div>
+
         <button
           type="submit"
           [disabled]="rsvpForm.invalid || isSubmitting"
-          class="border-2 mt-4 border-black cursor-pointer rounded bg-black text-white w-32 py-1 hover:text-black hover:bg-transparent transition-all duration-300 ease-in-out"
+          class="border-2 mt-4 border-black cursor-pointer rounded bg-black text-white w-32 py-1 px-1 hover:text-black hover:bg-transparent transition-all duration-300 ease-in-out"
         >
           {{ isSubmitting ? "Submitting..." : "Submit" }}
         </button>
       </form>
-    </div>
 
-    <div *ngIf="submissionSuccess" class="success-message">
-      Thank you for your RSVP!
-    </div>
-    <div *ngIf="submissionError" class="error-message">
-      There was an error submitting your RSVP. Please try again.
+      <div *ngIf="submissionSuccess" class="success-message">
+        Thank you for your RSVP!
+      </div>
+      <div *ngIf="submissionError" class="error-message">
+        There was an error submitting your RSVP. Please try again.
+      </div>
     </div>
   </div>
 </div>

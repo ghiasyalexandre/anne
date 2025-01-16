@@ -24,6 +24,8 @@ export class RsvpComponent implements OnInit {
 
   events = ['Horseback Riding', 'Petting Zoo']; // List of events to toggle
 
+  showPlusOne = false; // Toggle state for +1 invitation
+
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
@@ -32,7 +34,37 @@ export class RsvpComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       phone: ['', [Validators.required, Validators.pattern('^[- +()0-9]+$')]],
       attending: ['yes', Validators.required],
+      address: ['', Validators.required],
+      zipcode: ['', Validators.required],
+
+      plusOne: [false], // Toggle field
+
+      plusOneName: ['', Validators.required],
+      plusOneEmail: ['', [Validators.required, Validators.email]],
+      plusOnePhone: [
+        '',
+        [Validators.required, Validators.pattern('^[- +()0-9]+$')],
+      ],
+      plusOneAddress: ['', Validators.required],
+      plusOneZipcode: ['', Validators.required],
+
       events: this.fb.array([]), // Array for event toggles
+      events1: this.fb.array([]), // Array for event toggles
+    });
+
+    // Listen to the toggle state and clear fields when unchecked
+    this.rsvpForm.get('plusOne')?.valueChanges.subscribe((value) => {
+      this.showPlusOne = value;
+      if (!value) {
+        this.rsvpForm.patchValue({
+          plusOneName: '',
+          plusOneEmail: '',
+          plusOnePhone: '',
+          plusOneAddress: '',
+          plusOneZipcode: '',
+          events1: '',
+        });
+      }
     });
   }
 
@@ -41,8 +73,23 @@ export class RsvpComponent implements OnInit {
     return this.rsvpForm.get('events') as FormArray;
   }
 
+  get eventsFormArray1(): FormArray {
+    return this.rsvpForm.get('events1') as FormArray;
+  }
+
   toggleEvent(event: string): void {
     const eventArray = this.eventsFormArray;
+    const index = eventArray.value.indexOf(event);
+
+    if (index === -1) {
+      eventArray.push(this.fb.control(event));
+    } else {
+      eventArray.removeAt(index);
+    }
+  }
+
+  toggleEvent1(event: string): void {
+    const eventArray = this.eventsFormArray1;
     const index = eventArray.value.indexOf(event);
 
     if (index === -1) {
@@ -78,7 +125,7 @@ export class RsvpComponent implements OnInit {
           );
           this.isSubmitting = false;
           this.submissionSuccess = true;
-          this.rsvpForm.reset({ attending: 'yes' }); // Reset form with default value
+          this.rsvpForm.reset({ attending: 'yes', plusOne: false }); // Reset form with default value
         },
         (error) => {
           console.error('Email sending failed:', error);
