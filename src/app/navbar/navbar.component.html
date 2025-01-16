@@ -1,9 +1,9 @@
 <nav
-  class="bg-white didotBold border-b border-neutral-400/50 py-3 px-4 sm:px-8 text-black font-semibold xs:text-lg sm:text-xl"
+  class="bg-white didot border-b border-neutral-400/50 py-3 px-4 sm:px-8 text-black font-semibold xs:text-lg sm:text-xl"
 >
   <ul class="flex justify-between">
     <li>
-      <a routerLink="/" class="relative group">
+      <a draggable="false" routerLink="/" class="relative group">
         Home
         <span
           class="absolute -bottom-1 left-0 w-0 h-0.5 bg-neutral-800 transition-all group-hover:w-full"
@@ -11,15 +11,19 @@
       </a>
     </li>
     <li>
-      <a routerLink="/" class="relative group">
+      <a
+        draggable="false"
+        routerLink="/"
+        class="relative group text-neutral-700/50 cursor-text"
+      >
         Accomondations
-        <span
-          class="absolute -bottom-1 left-0 w-0 h-0.5 bg-neutral-800 transition-all group-hover:w-full"
-        ></span>
+        <!-- <span
+          class="absolute -bottom-1 left-0 w-0 h-0.5 bg-neutral-700/50 transition-all group-hover:w-full"
+        ></span> -->
       </a>
     </li>
     <li>
-      <a routerLink="/details" class="relative group">
+      <a draggable="false" routerLink="/details" class="relative group">
         Details
         <span
           class="absolute -bottom-1 left-0 w-0 h-0.5 bg-neutral-800 transition-all group-hover:w-full"
@@ -27,7 +31,7 @@
       </a>
     </li>
     <li>
-      <a routerLink="/rsvp" class="relative group">
+      <a draggable="false" routerLink="/rsvp" class="relative group">
         RSVP
         <span
           class="absolute -bottom-1 left-0 w-0 h-0.5 bg-neutral-800 transition-all group-hover:w-full"
