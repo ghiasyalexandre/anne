@@ -13,22 +13,22 @@ export const routes: Routes = [
     path: '',
     component: HomeComponent,
   },
-  {
-    path: 'SaveTheDate',
-    component: SavethedComponent,
-  },
+//   {
+//     path: 'SaveTheDate',
+//     component: SavethedComponent,
+//   },
   {
     path: 'details',
     component: DetailsComponent,
   },
-  {
-    path: 'Wait',
-    component: PreviewwebComponent,
-  },
-  {
-    path: 'gallery',
-    component: GalleryComponent,
-  },
+//   {
+//     path: 'Wait',
+//     component: PreviewwebComponent,
+//   },
+//   {
+//     path: 'gallery',
+//     component: GalleryComponent,
+//   },
   {
     path: 'accomondations',
     component: AccomondationsComponent,
