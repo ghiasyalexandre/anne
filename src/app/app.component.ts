@@ -21,7 +21,7 @@ export class AppComponent {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: any) => {
-      const allowedRoutes = ['', 'details', 'rsvp'];
+      const allowedRoutes = ['TAHome', 'TAdetails', 'TArsvp'];
       const currentRoute = event.urlAfterRedirects.replace('/', '');
       this.shouldShowElement = allowedRoutes.includes(currentRoute);
     });

@@ -10,7 +10,7 @@ import { PreviewwebComponent } from './previewweb/previewweb.component';
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'TAHome',
     component: HomeComponent,
   },
   {
@@ -18,7 +18,7 @@ export const routes: Routes = [
     component: SavethedComponent,
   },
   {
-    path: 'details',
+    path: 'TAdetails',
     component: DetailsComponent,
   },
 //   {
@@ -30,15 +30,15 @@ export const routes: Routes = [
 //     component: GalleryComponent,
 //   },
   {
-    path: 'accomondations',
+    path: 'TAaccomondations',
     component: AccomondationsComponent,
   },
   {
-    path: 'registry',
+    path: 'TAregistry',
     component: RegistryComponent,
   },
   {
-    path: 'rsvp',
+    path: 'TArsvp',
     component: RsvpComponent,
   },
 ];
