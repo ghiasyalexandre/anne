@@ -1,7 +1,11 @@
 <main class="relative main">
-
-  <app-nav />
+  <div *ngIf="shouldShowElement">
+    <app-nav />
+  </div>
 
   <router-outlet />
-  <app-footer /> 
+
+  <div *ngIf="shouldShowElement">
+    <app-footer />
+  </div>
 </main>

@@ -13,10 +13,10 @@ export const routes: Routes = [
     path: '',
     component: HomeComponent,
   },
-//   {
-//     path: 'SaveTheDate',
-//     component: SavethedComponent,
-//   },
+  {
+    path: 'SaveTheDate',
+    component: SavethedComponent,
+  },
   {
     path: 'details',
     component: DetailsComponent,
