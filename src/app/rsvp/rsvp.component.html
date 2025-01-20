@@ -2,7 +2,12 @@
   <div
     class="bg2 h-screen min-h-fit px-4 sm:px-8 pt-8 pb-8 sm:flex sm:flex-col place-items-center"
   >
-    <h1 class="text-5xl didotItalic font-bold mb-4 text-center">RSVP</h1>
+    <h1 class="relative text-5xl didotItalic font-bold mb-4 text-center">
+      RSVP
+      <span
+        class="absolute -bottom-1 -left-1 h-0.5 bg-neutral-800 transition-all w-full"
+      ></span>
+    </h1>
 
     <div
       class="bg-white h-fit sm:min-w-[450px] p-8 rounded-lg shadow-md shadow-black/30"
@@ -24,7 +29,7 @@
         (ngSubmit)="sendRSVP()"
       >
         <div class="flex flex-col">
-          <label class="font-semibold text-xl tracking-wide" for="name"
+          <label class="font-semibold sm:text-xl tracking-wide" for="name"
             >Full Name:</label
           >
           <input
@@ -44,7 +49,7 @@
         </div>
 
         <div class="flex flex-col">
-          <label class="font-semibold text-xl tracking-wide" for="email"
+          <label class="font-semibold sm:text-xl tracking-wide" for="email"
             >Email:</label
           >
           <input
@@ -64,7 +69,7 @@
         </div>
 
         <div class="flex flex-col">
-          <label class="font-semibold text-xl tracking-wide" for="phone"
+          <label class="font-semibold sm:text-xl tracking-wide" for="phone"
             >Phone Number:</label
           >
           <input
@@ -84,7 +89,7 @@
         </div>
 
         <div class="flex flex-col">
-          <label class="font-semibold text-xl tracking-wide" for="address"
+          <label class="font-semibold sm:text-xl tracking-wide" for="address"
             >Address:</label
           >
           <input
@@ -105,7 +110,7 @@
         </div>
 
         <div class="flex flex-col">
-          <label class="font-semibold text-xl tracking-wide" for="zipcode"
+          <label class="font-semibold sm:text-xl tracking-wide" for="zipcode"
             >Zipcode:</label
           >
           <input
@@ -126,7 +131,7 @@
         </div>
 
         <!-- +1 Invitation Toggle -->
-        <div class="form-group text-xl font-semibold tracking-wide">
+        <div class="form-group sm:text-xl font-semibold tracking-wide">
           <label class="flex gap-2 place-items-center">
             <input type="checkbox" formControlName="plusOne" />
             Bringing a +1?
@@ -137,7 +142,9 @@
         <div *ngIf="showPlusOne" class="flex flex-col gap-3 tracking-wide">
           <hr class="border-neutral-400/30" />
           <div class="flex flex-col">
-            <label class="font-semibold text-xl tracking-wide" for="plusOneName"
+            <label
+              class="font-semibold sm:text-xl tracking-wide"
+              for="plusOneName"
               >+1 Full Name:</label
             >
             <input
@@ -159,7 +166,7 @@
 
           <div class="flex flex-col">
             <label
-              class="font-semibold text-xl tracking-wide"
+              class="font-semibold sm:text-xl tracking-wide"
               for="plusOneEmail"
               >+1 Email:</label
             >
@@ -182,7 +189,7 @@
 
           <div class="flex flex-col">
             <label
-              class="font-semibold text-xl tracking-wide"
+              class="font-semibold sm:text-xl tracking-wide"
               for="plusOnePhone"
               >+1 Phone Number:</label
             >
@@ -205,7 +212,7 @@
 
           <div class="flex flex-col">
             <label
-              class="font-semibold text-xl tracking-wide"
+              class="font-semibold sm:text-xl tracking-wide"
               for="plusOneAddress"
               >+1 Address:</label
             >
@@ -228,7 +235,7 @@
 
           <div class="flex flex-col">
             <label
-              class="font-semibold text-xl tracking-wide"
+              class="font-semibold sm:text-xl tracking-wide"
               for="plusOneZipcode"
               >+1 Zipcode:</label
             >
@@ -251,7 +258,9 @@
         </div>
 
         <div class="flex flex-col gap-2">
-          <label class="font-semibold text-xl tracking-wide">Attending:</label>
+          <label class="font-semibold sm:text-xl tracking-wide"
+            >Attending:</label
+          >
           <div class="flex gap-4">
             <label>
               <input type="radio" formControlName="attending" value="yes" />
@@ -265,7 +274,7 @@
         </div>
 
         <div class="flex flex-col gap-2">
-          <label class="font-semibold text-xl tracking-wide">Events:</label>
+          <label class="font-semibold sm:text-xl tracking-wide">Events:</label>
           <div *ngFor="let event of events">
             <label>
               <input
@@ -279,7 +288,9 @@
         </div>
 
         <div *ngIf="showPlusOne" class="flex flex-col gap-3 tracking-wide">
-          <label class="font-semibold text-xl tracking-wide">+1 Events:</label>
+          <label class="font-semibold sm:text-xl tracking-wide"
+            >+1 Events:</label
+          >
           <div *ngFor="let event of events">
             <label>
               <input
