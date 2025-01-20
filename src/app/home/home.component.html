@@ -44,12 +44,19 @@
   </div>
 
   <!-- Section 2 ---------------------->
-  <div class="h-fit relative bg3 didotItalic font-semibold tracking-wider">
+  <div
+    class="h-fit group relative bg3 didotItalic font-semibold tracking-wider"
+  >
     <!-- <img class="absolute left-0 h-full bg-cover w-full -z-50 " src="./bg2.avif" /> -->
     <div
       class="flex flex-col gap-8 place-items-center py-16 px-8 md:px-24 lg:px-32"
     >
-      <h3 class="text-3xl sm:text-4xl lg:text-5xl font-bold">Destination</h3>
+      <h3 class="relative text-3xl sm:text-4xl lg:text-5xl font-bold">
+        Destination
+        <span
+          class="absolute bottom-0 -left-1 w-0 h-0.5 duration-200 bg-black transition-all group-hover:w-full"
+        ></span>
+      </h3>
       <p class="text-lg sm:text-xl lg:text-2xl">
         In this unforgettable destination wedding in the enchanting paradise of
         Puerto Rico.<br />
@@ -72,20 +79,31 @@
 
   <!-- Section 3 -------------------------->
 
-  <div class="relative h-fit bg1 didotItalic font-semibold tracking-wider">
+  <div
+    class="relative h-fit group bg1 didotItalic font-semibold tracking-wider"
+  >
     <div
       class="flex flex-col place-items-center bg-white gap-8 p-8 filter-none"
     >
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold">Details</h2>
+      <h2 class="relative text-3xl sm:text-4xl lg:text-5xl font-bold">
+        Details
+        <span
+          class="absolute bottom-0 -left-1 w-0 h-0.5 bg-black duration-200 transition-all group-hover:w-full"
+        ></span>
+      </h2>
       <div class="flex flex-col gap-1 text-lg sm:text-xl lg:text-2xl">
         <p>
-          <a class="font-semibold cursor-text">Wedding Ceremony</a>: Wednesday,
-          the 9th of April, 2025
+          <a class="font-semibold cursor-text text-rose-500"
+            >Wedding Ceremony:</a
+          >
+          Wednesday, the 9th of April, 2025
         </p>
-        <p><a class="font-semibold cursor-text">Time</a>: 5:00 PM</p>
         <p>
-          <a class="font-semibold cursor-text">Venue</a>: Hacienda Los Pablo,
-          Lajas, Puerto Rico
+          <a class="font-semibold cursor-text text-rose-500">Venue:</a> Hacienda
+          Los Pablo, Lajas, Puerto Rico
+        </p>
+        <p>
+          <a class="font-semibold cursor-text text-rose-500">Time:</a> 5:00 PM
         </p>
       </div>
       <p class="text-lg sm:text-xl font-semibold">Reception to follow</p>
@@ -107,10 +125,10 @@
           <a
             draggable="false"
             routerLink="/TA-rsvp"
-            class="font-semibold relative group cursor-pointer text-rose-500"
+            class="font-semibold relative group/btn cursor-pointer text-rose-500"
             >RSVP
             <span
-              class="absolute bottom-0 left-0 w-0 h-0.5 bg-rose-400 transition-all group-hover:w-[90%]"
+              class="absolute bottom-0 -left-1 w-0 h-0.5 bg-rose-400 transition-all group-hover/btn:w-[90%]"
             ></span
           ></a>
           by March 9th, 2025
