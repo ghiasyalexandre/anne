@@ -14,7 +14,7 @@ export const routes: Routes = [
     component: SavethedComponent,
   },
   {
-    path: 'TAHome',
+    path: 'TA-home',
     component: HomeComponent,
   },
   {
@@ -22,7 +22,7 @@ export const routes: Routes = [
     component: SavethedComponent,
   },
   {
-    path: 'TAdetails',
+    path: 'TA-details',
     component: DetailsComponent,
   },
   //   {
@@ -34,15 +34,15 @@ export const routes: Routes = [
   //     component: GalleryComponent,
   //   },
   {
-    path: 'TAaccomondations',
+    path: 'TA-accomondations',
     component: AccomondationsComponent,
   },
   {
-    path: 'TAregistry',
+    path: 'TA-registry',
     component: RegistryComponent,
   },
   {
-    path: 'TArsvp',
+    path: 'TA-rsvp',
     component: RsvpComponent,
   },
 ];
