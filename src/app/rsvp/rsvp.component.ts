@@ -32,21 +32,18 @@ export class RsvpComponent implements OnInit {
     this.rsvpForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      phone: ['', [Validators.required, Validators.pattern('^[- +()0-9]+$')]],
+      phone: ['', Validators.required],
       attending: ['yes', Validators.required],
       address: ['', Validators.required],
       zipcode: ['', Validators.required],
 
-      plusOne: [false], // Toggle field
+      plusOne: ['no', Validators.required], // Toggle field
 
-      plusOneName: ['', Validators.required],
-      plusOneEmail: ['', [Validators.required, Validators.email]],
-      plusOnePhone: [
-        '',
-        [Validators.required, Validators.pattern('^[- +()0-9]+$')],
-      ],
-      plusOneAddress: ['', Validators.required],
-      plusOneZipcode: ['', Validators.required],
+      plusOneName: [''],
+      plusOneEmail: [''],
+      plusOnePhone: [''],
+      plusOneAddress: [''],
+      plusOneZipcode: [''],
 
       events: this.fb.array([]), // Array for event toggles
       events1: this.fb.array([]), // Array for event toggles
@@ -54,7 +51,13 @@ export class RsvpComponent implements OnInit {
 
     // Listen to the toggle state and clear fields when unchecked
     this.rsvpForm.get('plusOne')?.valueChanges.subscribe((value) => {
-      this.showPlusOne = value;
+      this.showPlusOne = value == 'no' ? false : true;
+      this.rsvpForm.get('plusOneName')?.clearValidators();
+      this.rsvpForm.get('plusOneEmail')?.clearValidators();
+      this.rsvpForm.get('plusOnePhone')?.clearValidators();
+      this.rsvpForm.get('plusOneAddress')?.clearValidators();
+      this.rsvpForm.get('plusOneZipcode')?.clearValidators();
+
       if (!value) {
         this.rsvpForm.patchValue({
           plusOneName: '',
@@ -64,6 +67,14 @@ export class RsvpComponent implements OnInit {
           plusOneZipcode: '',
           events1: '',
         });
+      } else {
+        this.rsvpForm.get('plusOneName')?.addValidators(Validators.required);
+        this.rsvpForm
+          .get('plusOneEmail')
+          ?.addValidators([Validators.required, Validators.email]);
+        this.rsvpForm.get('plusOnePhone')?.addValidators(Validators.required);
+        this.rsvpForm.get('plusOneAddress')?.addValidators(Validators.required);
+        this.rsvpForm.get('plusOneZipcode')?.addValidators(Validators.required);
       }
     });
   }
