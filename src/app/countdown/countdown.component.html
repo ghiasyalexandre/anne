@@ -1,32 +1,16 @@
-<div class="flex flex-col text-center justify-between pt-12 h-screen bg-gray-200" *ngIf="timeLeft > 0">
-    
-    <div>
-        <h2 class="text-5xl font-normal font-serif">Tico & Anne's Wedding</h2>
-        <h2 class="text-5xl font-normal font-serif mt-4">Save the Date!</h2>
-    </div>
-    <div class="flex flex-col items-center justify-items-center mb-24">
-        <h2 class="text-7xl font-bold text-white bg-black/90 p-4 rounded-md hover:scale-110 transition-all ease-in-out duration-500">{{ days }}d {{ hours }}h {{ minutes }}m {{ seconds }}s</h2>
-        <p class="text-xl text-gray-700 mt-4 font-nromal  font-serif">Countdown to {{ targetDate }}</p>
-    </div>
-    <div class="text-center text-white h-fit">
-        <p class="text-black  font-serif font-bold text-xl md:text-3xl mt-4 text-center">
-            Add to Calendar
-        </p>
-        <div id="logo_container" class="  font-serif mt-2 pb-4 text-base md:text-xl text-center flex justify-center md:gap-2">
-            <a
-            class="bg-black text-white shadow-md shadow-black/30 rounded py-2 px-3 hover:scale-110 transition-all duration-300 ease-in-out"
-            href="https://calget.com/0hx9o49u?cal=google" title="Google" target="_blank" style="display: inline-flex; align-items: center; margin: 5px; text-decoration: none;">
-                <img src="https://calget.com/assets/img/calendar_icons/icon-google.png" alt="Google" border="0" style="height: 18px; width: 18px; margin-right: 10px;">Google
-            </a>
-            <a class="bg-black text-white shadow-md shadow-black/30 rounded py-2 px-3 hover:scale-110 transition-all duration-300 ease-in-out"
-            href="https://calget.com/0hx9o49u?cal=apple" title="Apple" target="_blank" style="display: inline-flex; align-items: center; margin: 5px; text-decoration: none;">
-                <img class="invert" src="https://calget.com/assets/img/calendar_icons/icon-apple.png" alt="Apple" border="0" style="height: 18px; width: 18px; margin-right: 10px;">Apple
-            </a>
-            <a class="bg-black text-white shadow-md shadow-black/30 rounded py-2 px-3 hover:scale-110 transition-all duration-300 ease-in-out"
-            href="https://calget.com/0hx9o49u?cal=outlook" title="Outlook Web" target="_blank" style="display: inline-flex; align-items: center; margin: 5px; text-decoration: none;">
-                <img src="https://calget.com/assets/img/calendar_icons/icon-outlook.png" alt="Outlook" border="0" style="height: 18px; width: 18px; margin-right: 10px;">Outlook
-            </a>
-
-        
-        </div>
-    </div></div>
+<div
+  class="flex flex-col text-center justify-between pt-4 bg-white"
+  *ngIf="timeLeft > 0"
+>
+  <h2 class="text-5xl font-normal font-serif my-4 italic">Save the Date!</h2>
+  <div class="flex flex-col items-center justify-items-center mb-8">
+    <h2
+      class="text-5xl font-bold text-white bg-black/90 p-4 rounded-md hover:scale-110 transition-all ease-in-out duration-500"
+    >
+      {{ days }}d {{ hours }}h {{ minutes }}m {{ seconds }}s
+    </h2>
+    <p class="text-xl text-gray-700 mt-4 font-nromal font-serif">
+      Countdown to {{ targetDate }}
+    </p>
+  </div>
+</div>
