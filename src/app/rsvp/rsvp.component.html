@@ -1,14 +1,20 @@
 <div class="">
   <div
-    class="bg2 h-screen group min-h-fit px-4 sm:px-8 pt-8 pb-8 sm:flex sm:flex-col place-items-center"
+    class="bg2 h-screen min-h-fit px-4 sm:px-8 pt-8 pb-8 sm:flex sm:flex-col place-items-center space-y-8 place-content-center"
   >
+    <h1 class="relative text-5xl didotItalic text-center leading-loose">
+      Please contact Anne or Tico <br />
+      directly to <a class="text-rose-500 cursor-text">RSVP.</a> <br />
+      Submissions closed March 9th.
+    </h1>
+    <!-- 
     <h1 class="relative text-5xl didotItalic font-bold mb-4 text-center">
       RSVP
       <span
         class="absolute -bottom-1 -left-1 h-0.5 w-0 bg-neutral-800 transition-all duration-200 ease-in-out group-hover:w-full"
       ></span>
     </h1>
-
+    
     <div
       class="bg-white h-fit sm:min-w-[450px] p-8 rounded-lg shadow-md shadow-black/30"
     >
@@ -132,7 +138,7 @@
           </div>
         </div>
 
-        <!-- +1 Invitation Radio -->
+         +1 Invitation Radio
         <div class="flex flex-col gap-2">
           <label class="font-semibold sm:text-xl tracking-wide"
             >Add a +1?</label
@@ -149,7 +155,7 @@
           </div>
         </div>
 
-        <!-- +1 Details (Only Shows When Checked) -->
+         +1 Details (Only Shows When Checked)
         <div *ngIf="showPlusOne" class="flex flex-col gap-3 tracking-wide">
           <hr class="border-neutral-400/30" />
           <div class="flex flex-col">
@@ -330,5 +336,6 @@
         There was an error submitting your RSVP. Please try again.
       </div>
     </div>
+    -->
   </div>
 </div>
