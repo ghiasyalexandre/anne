@@ -32,7 +32,12 @@ export class AppComponent {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: any) => {
-        const allowedRoutes = ['TA-home', 'TA-details', 'TA-rsvp'];
+        const allowedRoutes = [
+          'TA-home',
+          'TA-details',
+          'TA-rsvp',
+          'TA-gallery',
+        ];
         const currentRoute = event.urlAfterRedirects.replace('/', '');
         this.shouldShowElement = allowedRoutes.includes(currentRoute);
       });

@@ -29,10 +29,10 @@ export const routes: Routes = [
   //     path: 'Wait',
   //     component: PreviewwebComponent,
   //   },
-  //   {
-  //     path: 'gallery',
-  //     component: GalleryComponent,
-  //   },
+  {
+    path: 'TA-gallery',
+    component: GalleryComponent,
+  },
   {
     path: 'TA-accomondations',
     component: AccomondationsComponent,
