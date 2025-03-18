@@ -1,5 +1,15 @@
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 py-4 px-4" @galleryAnimation>
-  <div class="gallery-item" *ngFor="let img of images">
-    <img [src]="img" alt="Gallery Image" />
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 py-4 px-4" @fadeInSlideUp>
+  <div
+    class="gallery-item"
+    *ngFor="let img of images; let i = index"
+    #galleryItem
+  >
+    <img
+      [@fadeInSlideUp]="
+        img.visible ? { value: 'show', params: { delay: img.delay } } : 'void'
+      "
+      [src]="img.src"
+      alt="Gallery Image"
+    />
   </div>
 </div>
