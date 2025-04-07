@@ -1,0 +1,106 @@
+<div class="">
+  <div
+    class="bg2 h-screen min-h-fit px-4 sm:px-8 pt-8 pb-8 sm:flex sm:flex-col place-items-center space-y-8"
+  >
+    <h1 class="relative text-5xl didotItalic font-bold mb-4 text-center">
+      Requests
+      <span
+        class="absolute -bottom-1 -left-1 h-0.5 w-0 bg-neutral-800 transition-all duration-200 ease-in-out group-hover:w-full"
+      ></span>
+    </h1>
+
+    <div
+      class="bg-white h-fit sm:min-w-[450px] p-8 rounded-lg shadow-md shadow-black/30"
+    >
+      <div class="flex place-content-center mb-4">
+        <div class="flex flex-col -space-y-3">
+          <h2
+            class="text-2xl sm:text-3xl didot text-rose-500 uppercase tracking-wide"
+          >
+            Let's
+          </h2>
+          <h2 class="text-4xl sm:text-5xl ml-1.5 didotItalic tracking-wide">
+            Celebrate!💃🏾🕺🏾
+          </h2>
+        </div>
+      </div>
+      <hr class="mb-4" />
+      <form
+        class="text-lg flex flex-col gap-3 didot"
+        [formGroup]="requestForm"
+        (ngSubmit)="sendRequest()"
+      >
+        <div class="flex flex-col">
+          <label class="font-semibold sm:text-xl tracking-wide" for="name"
+            >Full Name:</label
+          >
+          <input
+            type="text"
+            id="name"
+            formControlName="name"
+            class="border rounded px-2 w-full"
+          />
+          <div
+            *ngIf="
+              requestForm.get('name')?.touched &&
+              requestForm.get('name')?.invalid
+            "
+            class="error font-normal text-sm"
+          >
+            Full name is required.
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <div class="flex justify-between">
+            <label class="font-semibold sm:text-xl tracking-wide" for="song"
+              >Need a Request?</label
+            >
+            <p class="text-gray-400 text-sm">( speech, songs, etc. )</p>
+          </div>
+          <textarea
+            type="text"
+            id="song"
+            formControlName="song"
+            class="border rounded px-2 w-full h-16 text-wrap"
+          ></textarea>
+          <div
+            *ngIf="
+              requestForm.get('song')?.touched &&
+              requestForm.get('song')?.invalid
+            "
+            class="error font-normal text-sm"
+          >
+            A valid song is required.
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold">Add your songs here:</h3>
+          <a
+            class="hover:underline underline-offset-2 hover:cursor-pointer text-green-500"
+            href="https://open.spotify.com/playlist/5iS6tOqS4ZfDIlRNFLAG0i?si=7bb9d9e1daa44834&pt=b9d576da59c1663ceb12f299fe80ec28"
+            target="_blank"
+            draggable="false"
+          >
+            https://open.spotify.com/playlist/
+          </a>
+        </div>
+
+        <!-- <button
+          type="submit"
+          [disabled]="!requestForm.valid && requestForm.touched"
+          class="border-2 mt-4 border-black cursor-pointer rounded bg-black text-white w-32 py-1 px-1 hover:text-black hover:bg-transparent transition-all duration-300 ease-in-out"
+        >
+          {{ isSubmitting ? "Submitting..." : "Submit" }}
+        </button> -->
+      </form>
+
+      <div *ngIf="submissionSuccess" class="success-message">
+        Thank you for your request!
+      </div>
+      <div *ngIf="submissionError" class="error-message">
+        There was an error submitting your request. Please try again.
+      </div>
+    </div>
+  </div>
+</div>

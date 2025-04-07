@@ -6,7 +6,8 @@ import { RegistryComponent } from './registry/registry.component';
 import { RsvpComponent } from './rsvp/rsvp.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { SavethedComponent } from './savethed/savethed.component';
-import { PreviewwebComponent } from './previewweb/previewweb.component';
+//import { PreviewwebComponent } from './previewweb/previewweb.component';
+import { RequestsComponent } from './requests/requests.component';
 
 export const routes: Routes = [
   {
@@ -29,6 +30,11 @@ export const routes: Routes = [
   //     path: 'Wait',
   //     component: PreviewwebComponent,
   //   },
+
+  {
+    path: 'TA-requests',
+    component: RequestsComponent,
+  },
   {
     path: 'TA-gallery',
     component: GalleryComponent,

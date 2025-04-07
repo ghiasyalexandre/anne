@@ -37,6 +37,7 @@ export class AppComponent {
           'TA-details',
           'TA-rsvp',
           'TA-gallery',
+          'TA-requests',
         ];
         const currentRoute = event.urlAfterRedirects.replace('/', '');
         this.shouldShowElement = allowedRoutes.includes(currentRoute);
