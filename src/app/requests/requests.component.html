@@ -53,21 +53,21 @@
 
         <div class="flex flex-col">
           <div class="flex justify-between">
-            <label class="font-semibold sm:text-xl tracking-wide" for="song"
+            <label class="font-semibold sm:text-xl tracking-wide" for="request"
               >Need a Request?</label
             >
             <p class="text-gray-400 text-sm">( speech, songs, etc. )</p>
           </div>
           <textarea
             type="text"
-            id="song"
-            formControlName="song"
+            id="request"
+            formControlName="request"
             class="border rounded px-2 w-full h-16 text-wrap"
           ></textarea>
           <div
             *ngIf="
-              requestForm.get('song')?.touched &&
-              requestForm.get('song')?.invalid
+              requestForm.get('request')?.touched &&
+              requestForm.get('request')?.invalid
             "
             class="error font-normal text-sm"
           >
@@ -78,7 +78,7 @@
           <h3 class="text-xl font-semibold">Add your songs here:</h3>
           <a
             class="hover:underline underline-offset-2 hover:cursor-pointer text-green-500"
-            href="https://open.spotify.com/playlist/5iS6tOqS4ZfDIlRNFLAG0i?si=7bb9d9e1daa44834&pt=b9d576da59c1663ceb12f299fe80ec28"
+            href="https://open.spotify.com/playlist/30AtMsnb7hOBReewZmylpB?si=HnHcMIVeS4yjY0kZF_AD1A"
             target="_blank"
             draggable="false"
           >
@@ -86,13 +86,13 @@
           </a>
         </div>
 
-        <!-- <button
+        <button
           type="submit"
           [disabled]="!requestForm.valid && requestForm.touched"
           class="border-2 mt-4 border-black cursor-pointer rounded bg-black text-white w-32 py-1 px-1 hover:text-black hover:bg-transparent transition-all duration-300 ease-in-out"
         >
           {{ isSubmitting ? "Submitting..." : "Submit" }}
-        </button> -->
+        </button>
       </form>
 
       <div *ngIf="submissionSuccess" class="success-message">

@@ -27,7 +27,6 @@ export class RequestsComponent {
   ngOnInit(): void {
     this.requestForm = this.fb.group({
       name: ['', Validators.required],
-      song: [''],
       request: ['', [Validators.required]],
     });
   }
@@ -44,10 +43,10 @@ export class RequestsComponent {
 
     emailjs
       .send(
-        'service_k3b7cqo', // Replace with your EmailJS Service ID
-        'template_xhhcq09', // Replace with your EmailJS Template ID
+        'service_0vugl7r', // Replace with your EmailJS Service ID
+        'template_mzaa01h', // Replace with your EmailJS Template ID
         this.requestForm.value, // Form data
-        'cgRNJs5QV1wtHDGE0' // Replace with your EmailJS User ID
+        'l7BZNQP3cx-sa0HX1' // Replace with your EmailJS User ID
       )
       .then(
         (response) => {
